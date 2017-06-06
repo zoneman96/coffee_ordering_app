@@ -1,0 +1,44 @@
+<% include ../partials/header %>
+
+<header class="">
+    <h1>Coffee</h1>
+</header>
+<hr>
+    <div class="row flex-row text-center">
+        <% products.forEach(function(product) { %>
+            <% if(product.isAvailable && product.isCoffee) { %>
+                <div class="col-sm-6 col-md-3">
+                    <div class="thumbnail">
+                        <a href="/items/<%= product._id %>"><img src="<%= product.image %>" alt=""></a>
+                        <div class="caption">
+                            <a href="/items/<%= product._id %>">
+                                <h4><%= product.name %></h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            <% } %>
+        <% }) %>
+    </div>
+<header class="">
+    <h1>Tea</h1>
+</header>
+<hr>
+    <div class="row flex-row text-center">
+        <% products.forEach(function(product) { %>
+            <% if(product.isAvailable && !product.isCoffee) { %>
+                <div class="col-sm-6 col-md-3">
+                    <div class="thumbnail">
+                        <a href="/items/<%= product._id %>"><img src="<%= product.image %>" alt=""></a>
+                        <div class="caption">
+                            <a href="/items/<%= product._id %>">
+                                <h4><%= product.name %></h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            <% } %>
+        <% }) %>
+    </div>
+
+<% include ../partials/footer %>

@@ -1,0 +1,52 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar-default .navbar-brand {
+    color: black;
+}
+
+.card-img-top {
+    width: 100%;
+}
+
+.well {
+    padding: 1px;
+}
+/*.nobord{
+    padding: 10px;
+}*/
+
+.thumbnail {
+    padding: 0;
+}
+.custom-form {
+    display: inline;
+}
+
+.fa-shopping-cart {
+    font-size: 1.2em;
+}
+
+/*.card {
+    width: 100%
+}*/
+
+.flex-row {
+	display: flex;
+	flex-wrap: wrap;
+}
+.flex-row > [class*='col-'] {
+	display: flex;
+	flex-direction: column;
+}
+
+div .container.show{
+    float: center;
+    margin: 3em 5em;
+}
+
+textarea {
+    resize: none;
+    margin: 2em 0;
+}

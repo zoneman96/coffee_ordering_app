@@ -1,0 +1,32 @@
+<% include ./partials/header %>
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <h1>User Profile</h1>
+        <hr>
+        <h2>My Orders</h2>
+        <% orders.forEach(function(order){ %>
+            <div class="panel panel-primary">
+            <div class="panel-heading">
+            <%= order.time %>
+            </div>
+                <div class="panel-body">
+                    <ul class="list-group">
+                        <% order.items.forEach(function(item){ %>
+                            <li class="list-group-item">
+                                <a href="/items/<%=item.item._id %>"><%= item.item.name %></a> | <%= item.size.name %> | $<%= item.price %> per beverage. 
+                                <span class="pull-right">Qty <%= item.qty %></span>
+                            </li>
+                        <% }) %>
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                Total order price: $<%= order.cart.totalPrice %>
+                <em><span class="pull-right">Order ID: <%= order._id %></span></em>
+                </div>
+            </div>
+        <% }) %> 
+    </div>
+</div>
+
+<% include ./partials/footer %>
