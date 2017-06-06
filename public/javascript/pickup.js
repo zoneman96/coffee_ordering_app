@@ -1,0 +1,2 @@
+$("#pickupTime").flatpickr();
+alert("hi!")

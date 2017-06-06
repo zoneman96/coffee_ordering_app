@@ -66,4 +66,9 @@ router.get("/", function(req, res){
     res.render("cart/index", {products: cart.generateArray(), totalPrice: cart.totalPrice})
 })
 
+//Show Pickup Time Selector
+router.get("/pickup", function(req, res, next){
+    res.render("cart/pickupTime")
+})
+
 module.exports = router;
