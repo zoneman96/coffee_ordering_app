@@ -68,7 +68,14 @@ router.get("/", function(req, res){
 
 //Show Pickup Time Selector
 router.get("/pickup", function(req, res, next){
-    res.render("cart/pickupTime")
+    res.render("cart/pickupTime", {csrfToken: req.csrfToken()})
+})
+
+//set Pickup Time
+router.post("/pickup", function(req, res, next){
+    req.session.pickupTime = req.body.pickupTime;
+    console.log(req.session.pickupTime);
+    res.redirect("/cart");
 })
 
 module.exports = router;
