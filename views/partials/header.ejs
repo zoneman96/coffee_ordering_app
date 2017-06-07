@@ -48,6 +48,9 @@
                                 <ul class="dropdown-menu">
                                     <li><a href="/logout">Logout</a></li>
                                     <li><a href="/profile">Profile</a></li>
+                                    <% if(currentUser.isAdmin) { %>
+                                        <li><a href="/admin">Admin</a></li>
+                                    <% } %>
                                 </ul>
                             </li>
                         <%} else { %>

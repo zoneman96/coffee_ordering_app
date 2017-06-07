@@ -9,6 +9,21 @@ var middleware = require("../middleware");
 var Cart = require("../models/cart");
 var Order = require("../models/order");
 
+//Apply to all routes (is admin)
+router.use("/", middleware.isAdmin, function(req, res, next){
+    next()
+});
+
+//Root Route
+router.get("/", function(req, res, next){
+    res.redirect("admin/orders/pending")
+})
+
+//Orders Root Route
+router.get("/orders", function(req, res, next){
+    res.redirect("admin/orders/pending")
+})
+
 //Show Pending Orders
 router.get("/orders/pending", function(req, res, next){
     Order.find({isCompleted:"false"}, function(err, orders){

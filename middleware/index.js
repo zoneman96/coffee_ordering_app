@@ -24,7 +24,6 @@ middlewareObj.hasPickupTime = function(req, res, next){
 
 middlewareObj.isOpen = function(req, res, next){
     var now = moment().format("HHmm");
-    console.log(now)
     if(now <= 900 || now >= 1700){
         req.session.pickupTime = null;
         req.flash("error", "Sorry, we are closed.");
@@ -39,6 +38,14 @@ middlewareObj.notLoggedIn = function(req, res, next){
     }
     req.flash("error", "Already logged-in")
     res.redirect("/");
+}
+
+middlewareObj.isAdmin = function(req, res, next){
+    if(req.user && req.user.isAdmin === true){
+        return next()
+    }
+    req.flash("error", "You do not have access to this area.");
+    res.redirect("/profile");
 }
 
 module.exports = middlewareObj;
