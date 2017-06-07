@@ -83,7 +83,6 @@ router.post("/login", middleware.notLoggedIn, passport.authenticate("local-signi
         failureRedirect: "/login",
         failureFlash: true
     }), function(req, res, next){
-        console.log(req.session.oldUrl)
         if(req.session.oldUrl){
             //get and save old url
             var oldUrl = req.session.oldUrl;

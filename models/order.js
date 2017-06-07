@@ -14,7 +14,7 @@ var orderSchema = mongoose.Schema({
     orderPrice: {type: Number},
     time: {type: String, default: moment().format("LLLL"), required: true},
     isCompleted: {type: Boolean, default: false, required: true},
-    orderTime: {type: String, default: moment(Date.now()).add(10, "m").format("LT"), required: true}
+    pickupTime: {type: String, default: moment(Date.now()).add(10, "m").format("LT"), required: true}
 })
 
 module.exports = mongoose.model("Order", orderSchema);

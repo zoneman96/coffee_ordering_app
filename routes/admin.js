@@ -80,7 +80,6 @@ router.get("/orders/show/:id", middleware.isLoggedIn, function(req, res, next){
         var cart;
         cart = new Cart(order.cart);
         order.items = cart.generateArray();
-        console.log(order)
         res.render("admin/showOrder", {order: order});
     });
 });

@@ -50,7 +50,8 @@ router.post("/", middleware.isLoggedIn, function(req, res, next){
             orderPrice: cart.totalPrice,
             address: req.body.address,
             name: req.body.name,
-            paymentId: charge.id
+            paymentId: charge.id,
+            pickupTime: req.session.pickupTime
         })
         order.save(function(err, result){
             if (err){
