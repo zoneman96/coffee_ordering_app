@@ -50,3 +50,18 @@ textarea {
     resize: none;
     margin: 2em 0;
 }
+
+.center {
+    margin: 0 auto;
+    width: 100%;
+}
+
+#product-image{
+    margin: 2.5em auto;
+    width: 100%;
+}
+
+#btns-size{
+    margin: 2.5em auto;
+    width: 100%;
+}

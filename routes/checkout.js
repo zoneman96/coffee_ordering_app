@@ -17,9 +17,10 @@ router.use(csrfProtection);
 
 
 // Show checkout form
-router.get("/", middleware.isLoggedIn, function(req, res, next){
+router.get("/", middleware.isLoggedIn, middleware.isOpen, middleware.hasPickupTime, function(req, res, next){
     if(!req.session.cart){
-        return res.redirect("cart/index", {products:null})
+        req.flash("error", "No items in cart.")
+        return res.redirect("/cart")
     }
     var cart = new Cart(req.session.cart);
     res.render("cart/checkout", {total: cart.totalPrice, csrfToken: req.csrfToken()});
@@ -58,6 +59,7 @@ router.post("/", middleware.isLoggedIn, function(req, res, next){
             }
             req.flash("success", "Order Complete!")
             req.session.cart = null;
+            req.session.pickupTime = null;
             res.redirect("/profile");
         })
     });

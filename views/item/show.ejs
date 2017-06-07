@@ -1,52 +1,52 @@
 <% include ../partials/header %>
 
-    <div class="container show">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-3">
+            <div class="col-md-10 col-md-offset-1">
                 <div class="row">
-                    <div class="col-sm-12">
-                        <img class="img-responsive" src="<%= product.image %>" alt="">
+                    <div class="col-md-4">
+                        <img class="img-responsive" id="product-image" src="<%= product.image %>" alt="">
                     </div>
-                    <div class="col-sm-12">
-                        <p>Small: $<%= product.size.small.price %></p>
-                        <p>Medium: $<%= product.size.medium.price %></p>
-                        <p>Large: $<%= product.size.large.price %></p>
+                    <div class="col-md-8">
+                        <h2><%= product.name %></h2>
+                        <p><%= product.description %></p>
+                        <!-- Table -->
+                        <table class="table">
+                            <tr>
+                                <th>Small</th>
+                                <th>Medium</th>
+                                <th>Large</th>
+                            </tr>
+                            <tr>
+                                <td>$<%= product.size.small.price %></td>
+                                <td>$<%= product.size.medium.price %></td>
+                                <td>$<%= product.size.large.price %></td>
+                            </tr>
+                        </table>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span id="selected">Size</span> <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu size">
+                                <li><a href="#">Small</a></li>
+                                <li><a href="#">Medium</a></li>
+                                <li><a href="#">Large</a></li>
+                            </ul>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Espresso Shots <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                            </ul>
+                        </div>
+                        <a href="/cart/<%= product._id %>" class="btn btn-primary" id="to-cart" role="button">Add to Cart</a>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-9">
-                <h1><%= product.name %></h1>
-            </div>
-            <div class="col-sm-9">
-                <p><%= product.description %></p>
-            </div>
-            <div class="col-sm-9">
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span id="selected">Size</span> <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu size">
-                        <li><a href="#">Small</a></li>
-                        <li><a href="#">Medium</a></li>
-                        <li><a href="#">Large</a></li>
-                    </ul>
-                </div>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Espresso Shots <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                    </ul>
-                </div>
-                <a href="/cart/<%= product._id %>" class="btn btn-primary" id="to-cart" role="button">Add to Cart</a>
-            </div>
-            <div class="col-sm-9">
-                <h4>Special Instructions:</h4>
-                <textarea name="textarea" rows="5" cols="39"></textarea>
             </div>
         </div>
     </div>    

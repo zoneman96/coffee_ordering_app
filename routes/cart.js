@@ -71,11 +71,20 @@ router.get("/pickup", function(req, res, next){
     res.render("cart/pickupTime", {csrfToken: req.csrfToken()})
 })
 
-//set Pickup Time
-router.post("/pickup", function(req, res, next){
+//Set Pickup Time
+router.post("/pickup", middleware.isOpen, function(req, res, next){
     req.session.pickupTime = req.body.pickupTime;
-    console.log(req.session.pickupTime);
-    res.redirect("/cart");
+    if(req.session.oldUrl){
+        //get and save old url
+        var oldUrl = req.session.oldUrl;
+        //remove ald url global variable
+        req.session.oldUrl = null;
+        //redirect to old url
+        res.redirect(oldUrl);
+    } else {
+        res.redirect("/")
+    }
+
 })
 
 module.exports = router;

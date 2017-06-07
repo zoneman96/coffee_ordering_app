@@ -13,12 +13,12 @@ $("#pickupTime").flatpickr({
     // defaultHour: 12,
     // defaultMinute: 0
 
-    //Min Time
+    //Min Time (10 minutes from now)
     minDate: moment(Date.now()).add(10, "m").format("HH:mm"),
 
     //Max Time (4:50PM)
     maxDate: "16:50",
 
-    // Preload time with defaultDate instead:
+    // Preload time with defaultDate(time):
     defaultDate: moment(Date.now()).add(10, "m").format("HH:mm")
 });
