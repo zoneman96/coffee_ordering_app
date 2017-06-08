@@ -75,12 +75,38 @@ router.get("/orders/show/:id", middleware.isLoggedIn, function(req, res, next){
     Order.findById(req.params.id, function(err, order){
         if(err){
             req.flash("error", err);
-            return res.redirect("/admin/orders/pending")
+            return res.redirect("/admin/orders/pending");
         }
         var cart;
         cart = new Cart(order.cart);
         order.items = cart.generateArray();
         res.render("admin/showOrder", {order: order});
+    });
+});
+
+//Show items
+router.get("/items", function(req, res, next){
+    //get all Items
+    Item.find({}, function(err, items){
+        if(err){
+            req.flash("error", err);
+            res.redirect("/admin");
+        }
+        res.render("admin/items", {items: items});
+    });
+});
+
+//Toggle Availability of Item
+router.get("/items/available/:id", function(req, res, next){
+    //Find Item
+    Item.findById(req.params.id, function(err, item){
+        if(err){
+            req.flash("error", err);
+            res.redirect("/admin");
+        }
+        item.isAvailable = !item.isAvailable;
+        item.save()
+        res.redirect("/admin/items");
     });
 });
 

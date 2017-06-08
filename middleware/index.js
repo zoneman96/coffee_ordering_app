@@ -23,8 +23,8 @@ middlewareObj.hasPickupTime = function(req, res, next){
 }
 
 middlewareObj.isOpen = function(req, res, next){
-    // var now = moment().format("HHmm");
-    var now = 901
+    var now = moment().format("HHmm");
+    // var now = 901
     if(now <= 900 || now >= 1700){
         req.session.pickupTime = null;
         req.flash("error", "Sorry, we are currently closed.");
