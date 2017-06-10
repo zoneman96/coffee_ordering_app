@@ -84,7 +84,7 @@ router.get("/orders/show/:id", middleware.isLoggedIn, function(req, res, next){
     });
 });
 
-//Show items
+//List items
 router.get("/items", function(req, res, next){
     //get all Items
     Item.find({}, function(err, items){
@@ -109,5 +109,16 @@ router.get("/items/available/:id", function(req, res, next){
         res.redirect("/admin/items");
     });
 });
+
+//List Users
+router.get("/users", function(req, res, next){
+    User.find({}, function(err, users){
+        if(err){
+            req.flash("error", err)
+            res.redirect("/admin")
+        }
+        res.render("admin/users", {users: users})
+    })
+})
 
 module.exports = router;

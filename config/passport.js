@@ -36,7 +36,9 @@ passport.use("local-signup", new LocalStategy({
         }
         var newUser = new User();
         newUser.email = email,
-        newUser.password = newUser.encryptPassword(password)
+        newUser.password = newUser.encryptPassword(password),
+        newUser.firstName = req.body.firstName,
+        newUser.lastName = req.body.lastName,
         newUser.save(function(err, result){
             if(err){
                 return done(err);
