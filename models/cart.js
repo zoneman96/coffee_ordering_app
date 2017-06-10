@@ -24,15 +24,16 @@ module.exports =  function Cart(oldCart) {
                 price: 0,
                 currentPrice: 0, 
                 size: item.size[selectedSize], 
-                findById: id + "_" + selectedSize}
+                findById: id + "_" + selectedSize
+            }
         }
 
         //Update item information
         storedItem.qty++;
-        storedItem.price = storedItem.size.price * storedItem.qty;
-        storedItem.currentPrice = storedItem.price;
+        storedItem.price = storedItem.size.price;
+        storedItem.currentPrice = storedItem.price * storedItem.qty;
         this.totalQty++;
-        this.totalPrice += storedItem.price;
+        this.totalPrice += storedItem.size.price;
         this.totalPrice = moneyRound(this.totalPrice);
     }
 
