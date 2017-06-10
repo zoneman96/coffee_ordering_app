@@ -121,4 +121,26 @@ router.get("/users", function(req, res, next){
     })
 })
 
+//Show Users Orders
+router.get("/users/orders/:id", function(req, res, next){
+    User.findById(req.params.id, function(err, foundUser){
+        if(err){
+            req.flash("error", err);
+            res.redirect("/admin");
+        }
+        Order.find({user: foundUser}, function(err, orders){
+            if(err){
+            req.flash("error", err);
+            res.redirect("/admin");
+        }
+        var cart;
+        orders.forEach(function(order){
+            cart = new Cart(order.cart);
+            order.items = cart.generateArray();
+        });
+        res.render("admin/userOrders", {user: foundUser, orders: orders})
+        })
+    })
+})
+
 module.exports = router;

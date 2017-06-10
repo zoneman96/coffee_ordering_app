@@ -1,0 +1,38 @@
+<% include ../partials/header %>
+
+<ul class="nav nav-tabs">
+  <li role="presentation"><a href="/admin/orders/pending">Pending Orders</a></li>
+  <li role="presentation"><a href="/admin/orders/completed">Completed Orders</a></li>
+  <li role="presentation"><a href="/admin/items">Item List</a></li>
+  <li role="presentation" class="active"><a href="/admin/users">User List</a></li>
+</ul>
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <h1><%= user.firstName %> <%= user.lastName %>'s Orders</h1>
+        <hr>
+        <% orders.forEach(function(order){ %>
+            <div class="panel panel-primary">
+            <div class="panel-heading">
+            <%= order.time %>
+            </div>
+                <div class="panel-body">
+                    <ul class="list-group">
+                        <% order.items.forEach(function(item){ %>
+                            <li class="list-group-item">
+                                <a href="/items/<%=item.item._id %>"><%= item.item.name %></a> | <%= item.size.name %> | $<%= item.price %> per beverage. 
+                                <span class="pull-right">Qty <%= item.qty %></span>
+                            </li>
+                        <% }) %>
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                Total order price: $<%= order.cart.totalPrice %>
+                <em><span class="pull-right">Order ID: <%= order._id %></span></em>
+                </div>
+            </div>
+        <% }) %> 
+    </div>
+</div>
+
+<% include ../partials/footer %>

@@ -15,7 +15,8 @@
     <tr>
       <th>First Name <i class="fa fa-sort" aria-hidden="true"></i></th>
       <th>Last Name <i class="fa fa-sort" aria-hidden="true"></i></th>
-      <th>email <i class="fa fa-sort" aria-hidden="true"></i></th>
+      <th>Email <i class="fa fa-sort" aria-hidden="true"></i></th>
+      <th>Orders</i></th>
     </tr>
   </thead>
     <tbody>
@@ -24,6 +25,7 @@
             <td><%= user.firstName %></td>
             <td><%= user.lastName %></td>
             <td><%= user.email %></td>
+            <td><a href="/admin/users/orders/<%= user._id %>"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span></a></td>
             </tr>
       <% }) %>
     </tbody>
@@ -33,6 +35,7 @@
       <th>First Name</th>
       <th>Last Name</th>
       <th>Email</th>
+      <th>Orders</th>
     </tr>
   </tfoot>
 

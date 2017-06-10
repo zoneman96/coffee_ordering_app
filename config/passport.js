@@ -35,7 +35,7 @@ passport.use("local-signup", new LocalStategy({
             return done(null, false, {message: "Email is already in use."})
         }
         var newUser = new User();
-        newUser.email = email,
+        newUser.email = email.toLowerCase(),
         newUser.password = newUser.encryptPassword(password),
         newUser.firstName = req.body.firstName,
         newUser.lastName = req.body.lastName,

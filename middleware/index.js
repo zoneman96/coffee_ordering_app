@@ -13,12 +13,14 @@ middlewareObj.isLoggedIn = function(req, res, next){
 }
 
 middlewareObj.hasPickupTime = function(req, res, next){
-    if(req.session.pickupTime) {
+    var now = moment().format("HHmm");
+    var pickupTime = moment(req.session.pickupTime, "HH:mm").format("HHmm");
+    if(req.session.pickupTime && now <= pickupTime) {
         return next();
-    }
+    };
     //Save original Url
     req.session.oldUrl = req.originalUrl;
-    req.flash("error", "Please select pickup time.");
+    req.flash("success", "Please select pickup time.");
     res.redirect("/cart/pickup");
 }
 
