@@ -11,7 +11,7 @@
                             <div class="card-block clearfix">
                                 <img class="card-img-top" src="<%= item.item.image %>" alt="Card image cap">
                                 <div class="nobord">
-                                    <h3 class="card-title"><%= item.item.name %></h3>
+                                    <h3 class="card-title text-center"><%= item.item.name %></h3>
                                     <!-- <p class="card-text"><%= item.item.description %></p> -->
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item">Size :
@@ -46,10 +46,10 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="well">
-                <div class="card text-center">
+            <div class="well well-cart">
+                <div class="card card-cart text-center">
                     <div class="card-header">
-                        Cart
+                        <h3>Cart</h3>
                     </div>
                     <% if(session.cart){ %>
                         <div class="card-block">

@@ -12,3 +12,7 @@ $('#to-cart').click(function(){
     var oldUrl = this.attr('href');
     this.attr('href', oldUrl + size);
 })
+
+$(".btn .btn-primary").click(function(){
+    alert("clicked!")
+})

@@ -17,8 +17,10 @@ passport.use("local-signup", new LocalStategy({
     passwordField: "password",
     passReqToCallback: true
 }, function(req, email, password, done){
-    req.checkBody("email", "Invalid Email").notEmpty().isEmail();
-    req.checkBody("password", "Invalid Password").notEmpty().isLength({min: 6});
+    req.checkBody("firstName", "Please enter first name. ").notEmpty();
+    req.checkBody("lastName", "Please enter last name. ").notEmpty();
+    req.checkBody("email", "Invalid Email. ").notEmpty().isEmail();
+    req.checkBody("password", "Invalid Password. ").notEmpty().isLength({min: 6});
     var errors = req.validationErrors();
     if(errors){
         var messages = [];
@@ -35,7 +37,7 @@ passport.use("local-signup", new LocalStategy({
             return done(null, false, {message: "Email is already in use."})
         }
         var newUser = new User();
-        newUser.email = email.toLowerCase(),
+        newUser.email = email,
         newUser.password = newUser.encryptPassword(password),
         newUser.firstName = req.body.firstName,
         newUser.lastName = req.body.lastName,
