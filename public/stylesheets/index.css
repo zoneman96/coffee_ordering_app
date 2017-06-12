@@ -3,7 +3,11 @@ body {
 }
 
 .navbar-default .navbar-brand {
-    color: black;
+    color: #212121;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #212121;
 }
 
 .navbar-default {
@@ -11,7 +15,28 @@ body {
     border-color: #ffffff;
     border-radius: 0;
     transition: border 0.2s ease-in-out;
-    border-bottom: 1px solid rgb(221, 221, 221);
+    border-bottom: 1px solid #3F51B5;
+}
+
+a {
+    color: #303F9F;
+}
+
+a:hover {
+    color: #2f3240;
+    text-decoration: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #303F9F;
+    border-color: #C5CAE9;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #3F51B5;
+    border-color: #C5CAE9;
 }
 
 .container-fluid {
@@ -106,11 +131,28 @@ textarea {
 }
 
 #product-image{
-    margin: 2rem auto;
+    margin: 2.5rem auto;
     width: 100%;
 }
 
 #btns-size{
     margin: 2.5em auto;
     width: 100%;
+}
+
+.item-content {
+    margin-top: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 10rem;
+    margin-left: 2rem;
+}
+
+.badge {
+    background-color: #212121;
+}
+
+.panel-primary>.panel-heading {
+    margin: -1;
+    background-color: #303F9F;
+    border-color: #C5CAE9;
 }

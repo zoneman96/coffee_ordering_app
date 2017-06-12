@@ -1,9 +1,9 @@
 var mongoose = require("mongoose");
 
 function moneyRound(dollars) {
-    var cents = dollars * 100; // ... is 7.5 cents
-    var roundedCents = Math.round(cents); // ... but should really be 8 cents
-    var roundedPrice = roundedCents / 100; // ... so it's 0.08 dollars in the end
+    var cents = dollars * 100; // Convert dollars to cents
+    var roundedCents = Math.round(cents); // Round those cents 
+    var roundedPrice = roundedCents / 100; // turn them in to dollars again
     return roundedPrice;
 }
 
