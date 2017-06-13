@@ -28,7 +28,8 @@ var adminRoutes         = require("./routes/admin")
 
 //APP Config
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.DATABASEURL);
+var dbUrl = process.env.DATABASEURL || "mongodb://localhost/impact_coffee_app";
+mongoose.connect(dbUrl);
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.json())
