@@ -28,10 +28,7 @@ var adminRoutes         = require("./routes/admin")
 
 //APP Config
 mongoose.Promise = global.Promise;
-//Local
-// mongoose.connect("mongodb://localhost/impact_coffee_app");
-//Mlab
-mongoose.connect("mongodb://Caleb:(Zoneman69)@ds123722.mlab.com:23722/coffee_ordering_app");
+mongoose.connect(process.env.DATABASEURL);
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.json())

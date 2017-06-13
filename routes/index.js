@@ -19,16 +19,6 @@ router.get("/logout", function(req, res, next){
     res.redirect("/items")
 })
 
-//======================================
-//Routes not availble to logged in users
-//======================================
-// router.use("/", middleware.notLoggedIn, function(req, res, next){
-//     next();
-// })
-//======================================
-//After these lines
-//======================================
-
 //Profile
 router.get("/profile", middleware.isLoggedIn, function(req, res, next){
     //find user orders

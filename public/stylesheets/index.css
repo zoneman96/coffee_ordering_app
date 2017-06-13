@@ -87,9 +87,6 @@ hr {
 .well-cart {
     padding: 0px;
 }
-/*.nobord{
-    padding: 10px;
-}*/
 
 .thumbnail {
     padding: 0;
@@ -101,10 +98,6 @@ hr {
 .fa-shopping-cart {
     font-size: 1.2em;
 }
-
-/*.card {
-    width: 100%
-}*/
 
 .flex-row {
 	display: flex;
@@ -155,4 +148,8 @@ textarea {
     margin: -1;
     background-color: #303F9F;
     border-color: #C5CAE9;
+}
+
+form input#email.form-control {
+    text-transform: lowercase;
 }

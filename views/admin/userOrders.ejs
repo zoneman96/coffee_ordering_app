@@ -20,15 +20,15 @@
                     <ul class="list-group">
                         <% order.items.forEach(function(item){ %>
                             <li class="list-group-item">
-                                <a href="/items/<%=item.item._id %>"><%= item.item.name %></a> | <%= item.size.name %> | $<%= item.price %> per beverage. 
+                                <a href="/items/<%=item.item._id %>"><%= item.item.name %></a> | <%= item.size.name %> | $<%= item.price %>
                                 <span class="pull-right">Qty <%= item.qty %></span>
                             </li>
                         <% }) %>
                     </ul>
                 </div>
                 <div class="panel-footer">
-                Total order price: $<%= order.cart.totalPrice %>
-                <em><span class="pull-right">Order ID: <%= order._id %></span></em>
+                Total: $<%= order.cart.totalPrice %>
+                <em><span class="pull-right">ID: <%= order._id %></span></em>
                 </div>
             </div>
         <% }) %> 
