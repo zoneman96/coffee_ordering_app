@@ -8,7 +8,8 @@ var express             = require("express"),
     methodOverride      = require("method-override"),
     Item                = require("./models/item"),
     User                = require("./models/user"),
-    seedDB              = require("./seed/itemseeder"),
+    seedItemDB          = require("./seed/itemseeder"),
+    seedUserDB          = require("./seed/userseeder"),
     validator           = require("express-validator"),
     cookieParser        = require("cookie-parser"),
     session             = require("express-session"),
@@ -52,7 +53,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //Seed The Database
-seedDB();
+// seedItemDB();
+seedUserDB();
 
 // Sending to all pages
 app.use(function(req, res, next){
