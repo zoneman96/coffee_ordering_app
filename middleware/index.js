@@ -13,7 +13,7 @@ middlewareObj.isLoggedIn = function(req, res, next){
 }
 
 middlewareObj.hasPickupTime = function(req, res, next){
-    var now = moment().format("HHmm");
+    var now = moment().tz("America/Chicago").format("HHmm");
     console.log("Now: " + now)
     var pickupTime = moment(req.session.pickupTime, ["h:mm A"]).format("HHmm");
     console.log("Pickup time: " + pickupTime)

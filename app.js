@@ -16,6 +16,9 @@ var express             = require("express"),
     moment              = require('moment'),
     MongoStore          = require("connect-mongo")(session);
 
+//Requires without variable names
+require("moment-timezone");
+
 //Requiring Routes
 var itemRoutes          = require("./routes/item");
 var indexRoutes         = require("./routes/index")
@@ -26,9 +29,9 @@ var adminRoutes         = require("./routes/admin")
 //APP Config
 mongoose.Promise = global.Promise;
 //Local
-// mongoose.connect("mongodb://localhost/impact_coffee_app");
+mongoose.connect("mongodb://localhost/impact_coffee_app");
 //Mlab
-mongoose.connect("mongodb://Caleb:(Zoneman69)@ds123722.mlab.com:23722/coffee_ordering_app");
+// mongoose.connect("mongodb://Caleb:(Zoneman69)@ds123722.mlab.com:23722/coffee_ordering_app");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.json())
