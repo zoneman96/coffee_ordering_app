@@ -54,7 +54,7 @@ app.use(passport.session());
 
 //Seed The Database
 // seedItemDB();
-seedUserDB();
+// seedUserDB();
 
 // Sending to all pages
 app.use(function(req, res, next){
