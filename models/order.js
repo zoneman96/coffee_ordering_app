@@ -12,7 +12,7 @@ var orderSchema = mongoose.Schema({
     name: {type: String, required: true},
     paymentId: {type: String, required: true},
     orderPrice: {type: Number},
-    time: {type: String, default: moment().format("LLLL"), required: true},
+    time: {type: String, default: moment().tz("America/Chicago").format("LLLL"), required: true},
     isCompleted: {type: Boolean, default: false, required: true},
     pickupTime: {type: String, default: moment(Date.now()).add(10, "m").format("LT"), required: true}
 })
