@@ -52,7 +52,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //Seed The Database
-// seedDB();
+seedDB();
 
 // Sending to all pages
 app.use(function(req, res, next){
