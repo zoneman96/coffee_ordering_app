@@ -50,17 +50,19 @@ Once logging in as the admin you can:
 ### Mobile Screenshots
 
 -  Show Item
-<img src="https://github.com/zoneman96/coffee_ordering_app/blob/master/screenshots/Mobile_ShowItem.png" width="300">
-<img src="https://github.com/zoneman96/coffee_ordering_app/blob/master/screenshots/Mobile_Login.png" width="300">
+<img src="https://github.com/zoneman96/coffee_ordering_app/blob/master/screenshots/Mobile_ShowItem.png" width="400">
+
+-  Login
+<img src="https://github.com/zoneman96/coffee_ordering_app/blob/master/screenshots/Mobile_Login.png" width="400">
 
 -  Cart
-<img src="https://github.com/zoneman96/coffee_ordering_app/blob/master/screenshots/Mobile_Cart.png" width="600">
+<img src="https://github.com/zoneman96/coffee_ordering_app/blob/master/screenshots/Mobile_Cart.png" width="400">
 
 -  Select Pickup Time
-<img src="https://github.com/zoneman96/coffee_ordering_app/blob/master/screenshots/Mobile_SelectPickupTime.png" width="600">
+<img src="https://github.com/zoneman96/coffee_ordering_app/blob/master/screenshots/Mobile_SelectPickupTime.png" width="400">
 
 -  Profile
-<img src="https://github.com/zoneman96/coffee_ordering_app/blob/master/screenshots/Mobile_Profile.png" width="600">
+<img src="https://github.com/zoneman96/coffee_ordering_app/blob/master/screenshots/Mobile_Profile.png" width="400">
 
 ### Admin Screenshots
 
