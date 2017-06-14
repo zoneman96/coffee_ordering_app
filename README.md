@@ -20,9 +20,9 @@ A mobile ready, full-scale E-commerce application for ordering coffee and other 
 
 Feel free to create your own account, and make your own orders. Dont worry, Stripe is in test mode so no money will be taken from your credit card account. You can also use the dummy card number provided by Stripe for purchases: *4242424242424242*. Once completeing an order, you order history will be shown on your User Profile page.
 
-Administrator login:
-Email: admin@admin.com
-Password: password
+##### Administrator login:
+-  Email: admin@admin.com
+-  Password: password
 
 Once logging in as the admin you can:
 1. Access to the pending orders where see all of the items and information fulfill the order and mark it as complete.
