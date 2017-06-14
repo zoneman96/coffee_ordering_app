@@ -25,10 +25,10 @@ Email: admin@admin.com
 Password: password
 
 Once logging in as the admin you can:
- #### 1) Access to the pending orders where see all of the items and information fulfill the order and mark it as complete.
- #### 2) Access the completed orders and sort them via various criteria. 
- #### 3) Access a list of all of the users, and see their previous orders. 
- #### 4) View a list of all items and mark them as unavailable if out of stock.
+1. Access to the pending orders where see all of the items and information fulfill the order and mark it as complete.
+2. Access the completed orders and sort them via various criteria. 
+3. Access a list of all of the users, and see their previous orders. 
+4. View a list of all items and mark them as unavailable if out of stock.
 
 ### Desktop Screenshots
 
