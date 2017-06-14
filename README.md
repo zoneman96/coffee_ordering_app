@@ -18,7 +18,7 @@ A mobile ready, full-scale E-commerce application for ordering coffee and other 
 
 ### Usage
 
-Feel free to create your own account, and make your own orders. Dont worry, Stripe is in test mode so no money will be taken from your credit card account. You can also use the dummy card number provided by Stripe for purchases: *4242424242424242*. Once completeing an order, you order history will be shown on your User Profile page.
+Feel free to create your own account, and make some coffee orders. Dont worry, Stripe is in test mode so no money will be taken from your credit card account. :) If you would like, can also use the dummy card number provided by Stripe for purchases: *4242424242424242*. Once completeing an order, you order history will be shown on your User Profile page.
 
 ##### Administrator login:
 -  Email: admin@admin.com
@@ -41,10 +41,16 @@ Once logging in as the admin you can:
 -  Cart
 <img src="https://github.com/zoneman96/coffee_ordering_app/blob/master/screenshots/Desktop_cart.png" width="600">
 
+-  Checkout
+<img src="https://github.com/zoneman96/coffee_ordering_app/blob/master/screenshots/Desktop_Checkout.png" width="600">
+
 -  Profile
 <img src="https://github.com/zoneman96/coffee_ordering_app/blob/master/screenshots/Desktop_Profile.png" width="600">
 
 ### Mobile Screenshots
+
+-  Show Item
+<img src="https://github.com/zoneman96/coffee_ordering_app/blob/master/screenshots/Mobile_ShowItem.png" width="600">
 
 -  Login
 <img src="https://github.com/zoneman96/coffee_ordering_app/blob/master/screenshots/Mobile_Login.png" width="600">
