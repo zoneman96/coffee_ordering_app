@@ -50,7 +50,8 @@ Once logging in as the admin you can:
 ### Mobile Screenshots
 
 -  Show Item
-<img src="https://github.com/zoneman96/coffee_ordering_app/blob/master/screenshots/Mobile_ShowItem.png" width="400"><img src="https://github.com/zoneman96/coffee_ordering_app/blob/master/screenshots/Mobile_Login.png" width="400">
+<img src="https://github.com/zoneman96/coffee_ordering_app/blob/master/screenshots/Mobile_ShowItem.png" width="300">
+<img src="https://github.com/zoneman96/coffee_ordering_app/blob/master/screenshots/Mobile_Login.png" width="300">
 
 -  Cart
 <img src="https://github.com/zoneman96/coffee_ordering_app/blob/master/screenshots/Mobile_Cart.png" width="600">
