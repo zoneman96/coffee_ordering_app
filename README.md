@@ -77,7 +77,3 @@ Once logging in as the admin you can:
 
 -  Show Selected User's Orders
 <img src="https://github.com/zoneman96/coffee_ordering_app/blob/master/screenshots/Desktop_ShowUserOrders.png" width="600">
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
