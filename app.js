@@ -80,11 +80,6 @@ app.use("/", indexRoutes);
 app.use("/admin", adminRoutes);
 
 
-// Listen at port 3000
-// app.listen(3000, function() {
-//     console.log("Server listening");
-// })
-
 // On server
 app.listen(process.env.PORT || 3000, function(req,res) {
     console.log("SERVER STARTED");

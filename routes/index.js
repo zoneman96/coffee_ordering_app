@@ -44,7 +44,7 @@ router.get("/register", middleware.notLoggedIn, function(req, res, next){
 
 //Handle Register Logic
 router.post("/register", middleware.notLoggedIn, passport.authenticate("local-signup", {
-    // successRedirect: "/",
+    successRedirect: "/",
     failureRedirect: "/register",
     failureFlash: true
 }), function(req, res, next){
@@ -69,7 +69,7 @@ router.get("/login", middleware.notLoggedIn, function(req, res, next){
 //Handle Login Logic
 router.post("/login", middleware.notLoggedIn, passport.authenticate("local-signin",
     {
-        // successRedirect: "/items",
+        successRedirect: "/items",
         failureRedirect: "/login",
         failureFlash: true
     }), function(req, res, next){
