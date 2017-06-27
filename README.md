@@ -14,7 +14,7 @@ A mobile ready, full-scale E-commerce application for ordering coffee and other 
 ## Deployment
 -  The application is live at: https://shielded-anchorage-97469.herokuapp.com
 -  The application is deployed on **Heroku** using source code pulled directly from GitHub.
--  The database is deployed on **mlab.com** cloud. 
+-  The database is deployed on **mlab.com**. 
 
 ### Usage
 
