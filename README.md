@@ -5,6 +5,7 @@ A mobile ready, full-scale E-commerce application for ordering coffee and other 
 ## Tech Stack
 
 -  **Frontend**: EJS Templeting
+-  **Styling**: Boostrap
 -  **Backend**: Node.js, ExpressJS, Mongoose
 -  **Database**: MongoDB
 -  **Payments**: Stripe API
